@@ -3,12 +3,12 @@ import test from "@playwright/test";
 test('Youtube Search', async ({page}) => {
     await page.goto('https://www.youtube.com/')
 
-    await page.waitForTimeout(2000);
+    //await page.waitForTimeout(2000);
     const searchInput = page.locator('input#search');
     const searchButton = page.locator('#search-icon-legacy');
     
     await searchInput.fill('Playwright Automation');
-    await page.waitForTimeout(2000);
+    //await page.waitForTimeout(2000);
     await searchButton.click();
     await searchInput.press('Enter')
 });
