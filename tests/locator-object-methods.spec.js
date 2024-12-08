@@ -1,7 +1,7 @@
 // create a test group with three test in in it with empty test body, use import not require:
 import { test, expect } from '@playwright/test';
 
-test.describe('Test Group', () => {
+test.describe('@regression Test Group', () => {
 
     test.beforeEach(async ({page}) => {
         await page.goto('https://practice.cydeo.com');
@@ -13,7 +13,7 @@ test.describe('Test Group', () => {
     });
 
 
-    test('Check() checks the radio buttons & checkboxes, if not checked yet', async ({page}) => {
+    test('@smoke Check() checks the radio buttons & checkboxes, if not checked yet', async ({page}) => {
         let checkboxesLink = page.locator("text='Checkboxes'");
         await checkboxesLink.click();
         await page.waitForTimeout(2000);

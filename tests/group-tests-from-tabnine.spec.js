@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
 
-test.describe('Another Test Group', () => {
+test.describe('@regression Another Test Group', () => {
   test('Another Test Case 1', async ({ page }) => {
     console.log('Test Case 1');
   });
